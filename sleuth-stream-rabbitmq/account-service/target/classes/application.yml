@@ -1,0 +1,10 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: account-service
+  sleuth:
+    sampler:
+      percentage: 1.0
+  rabbitmq:
+    addresses: localhost

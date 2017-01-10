@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Zipkin-Service
+  datasource:
+    initialize: false
+  sleuth:
+    sampler:
+      percentage: 1.0
+server:
+  port: 9411

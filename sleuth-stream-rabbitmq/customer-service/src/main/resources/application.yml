@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: customer-service
+  rabbitmq:
+    addresses: localhost
+  sleuth:
+    sampler:
+      percentage: 1.0
