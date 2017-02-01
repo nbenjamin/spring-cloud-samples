@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: consulDemo
+#
+#  cloud:
+#    consul:
+#      host: localhost
+#      port: 8500
+#
+#      config:
+#        format: YAML
+#      discovery:
+#        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+#      enabled: true
