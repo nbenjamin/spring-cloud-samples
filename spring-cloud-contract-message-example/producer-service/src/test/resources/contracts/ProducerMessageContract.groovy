@@ -7,11 +7,11 @@ Contract.make {
     label "user message"
 
     input {
-        triggeredBy("publishMessage()")
+        triggeredBy('publishMessage()')
     }
 
     outputMessage {
-        sentTo("usertTopic")
+        sentTo("userTopic")
         body("{\n" +
                 "  \"id\": 1,\n" +
                 "  \"firstName\": \"Adam\",\n" +
