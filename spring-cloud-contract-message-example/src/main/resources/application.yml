@@ -3,4 +3,8 @@ spring:
     stream:
       bindings:
         input:
-          destination: usertTopic
+          destination: userTopic
+          content-type: application/json
+          consumer.headerMode: raw
+
+      default.consumer.headerMode: raw

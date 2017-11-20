@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 @Getter
 public class MessageListener {
 
-    List<User> users = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
 
     @StreamListener(Sink.INPUT)
     public void handleUserMessage(User user) {

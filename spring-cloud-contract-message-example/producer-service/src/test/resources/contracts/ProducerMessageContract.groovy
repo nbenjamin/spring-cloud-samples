@@ -4,19 +4,18 @@ Contract.make {
 
     description "User service message contract"
 
-    label "user message"
+    label ("user-message")
 
     input {
-        triggeredBy('publishMessage()')
+        triggeredBy("publishMessage()")
     }
 
     outputMessage {
         sentTo("userTopic")
-        body("{\n" +
-                "  \"id\": 1,\n" +
-                "  \"firstName\": \"Adam\",\n" +
-                "  \"lastName\": \"Benjamin\",\n" +
-                "  \"emailID\": \"adamBen@gmail.com\"\n" +
-                "}")
+        body([ id: 1,
+               firstName: "Adam",
+               lastName: "Benjamin",
+               emailID: "adamBen@gmail.com"
+                ])
     }
 }

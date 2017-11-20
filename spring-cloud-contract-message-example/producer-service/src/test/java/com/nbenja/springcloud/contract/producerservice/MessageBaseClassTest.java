@@ -13,11 +13,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class MessageBaseClassTest {
 
 	@Autowired
-	private MessageProducer messageProducer;
+	private MessageProducerController messageProducerController;
 
 	public void publishMessage() {
-		System.out.println(" ******** " + messageProducer);
-		messageProducer.publish(new User(1L, "Adam", "Benjamin", "adamBen@gmail.com"));
+		System.out.println(" ******** " + messageProducerController);
+		messageProducerController.publishMessage(new User(1L, "Adam", "Benjamin", "adamBen@gmail.com"));
 	}
 
 	@Test

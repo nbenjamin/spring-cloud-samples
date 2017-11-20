@@ -18,13 +18,18 @@ public class ProducerServiceApplication {
 }
 
 @RestController
-class MessageProducerApi {
+class MessageProducerController {
 
 	@Autowired
 	private MessageProducer messageProducer;
 
 	@PostMapping("messages")
 	public void publishMessage(User user) {
+		// Adding User manually to test StubTrigger
+		if(user == null) {
+			user = new User(1L, "Adam", "Benjamin",
+					"adamBen@gmail.com");
+		}
 		messageProducer.publish(user);
 	}
 }
