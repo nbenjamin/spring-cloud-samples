@@ -4,7 +4,9 @@ spring:
       bindings:
         input:
           destination: userTopic
+          content-type: 'application/x-java-object;type=com.nbenja.springcloud.contract.springcloudcontractmessageexample.User'
+          consumer:
+            header-mode: raw
+        output:
           content-type: application/json
-          consumer.headerMode: raw
 
-      default.consumer.headerMode: raw

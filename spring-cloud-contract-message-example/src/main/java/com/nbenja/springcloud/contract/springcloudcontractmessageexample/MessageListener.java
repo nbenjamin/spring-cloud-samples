@@ -20,6 +20,6 @@ public class MessageListener {
     @StreamListener(Sink.INPUT)
     public void handleUserMessage(User user) {
         log.info("User message received {}", user);
-        users.add(user);
+        //users.add(user);
     }
 }
