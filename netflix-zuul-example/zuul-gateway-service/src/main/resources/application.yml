@@ -1,0 +1,19 @@
+zuul:
+  routes:
+    account:
+      path: /accounts/**
+      url: http://localhost:8082/accounts/
+    customer:
+      path: /customers/**
+      url: http://localhost:8081/customers/
+  prefix: /api
+
+ribbon:
+  eureka:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+
+
