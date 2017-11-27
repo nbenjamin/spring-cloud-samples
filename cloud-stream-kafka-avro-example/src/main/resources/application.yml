@@ -1,0 +1,37 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        request:
+          destination: request
+          content-type: application/avro
+          group: kafka-bridge
+          binder: dockerKafka
+#          consumer:
+#            headerMode: raw
+        response:
+          content-type: application/avro
+          destination: response
+          group: kafka-bridge
+          binder: dockerKafka
+#          producer:
+#            headerMode: raw
+
+        output:
+          content-type: application/avro
+          destination: request
+          group: kafka-bridge
+          binder: dockerKafka
+      binders:
+        dockerKafka:
+          type: kafka
+          environment:
+            spring:
+              cloud:
+                stream:
+                  kafka:
+                    binder:
+                      brokers: localhost:9092
+                      zkNodes: localhost:2181
+      default-binder: dockerKafka
+

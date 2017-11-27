@@ -1,0 +1,9 @@
+{
+    "namespace": "com.nbenja.springcloud.cloudstreamkafkaavroexample.avro.domain",
+    "type": "record",
+    "name": "Request",
+     "fields": [
+         {"name": "requestId", "type": "string"},
+         {"name": "data", "type": ["string", "null"]}
+     ]
+}
