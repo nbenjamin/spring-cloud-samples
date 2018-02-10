@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.nbenja.springcloud.consul</groupId>
+	<artifactId>consul-service-discovery-example</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>consul-service-discovery-example</name>
+	<description>Demo project for Spring Boot</description>
+
+	<modules>
+		<module>consul-service-discovery</module>
+		<module>customer-consul-service</module>
+	</modules>
+
+</project>

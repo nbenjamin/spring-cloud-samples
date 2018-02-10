@@ -1,0 +1,8 @@
+version: "2"
+services:
+  consul:
+    image:  gliderlabs/consul-server:latest
+    command: "-server -dev -bootstrap -ui"
+    container_name: consul
+    ports:
+      - "8500:8500"
