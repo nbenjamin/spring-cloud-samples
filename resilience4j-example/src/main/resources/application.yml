@@ -1,0 +1,25 @@
+server:
+  port: 8800
+
+spring:
+  cloud:
+    circuitbreaker:
+      resilience4j:
+        enabled: true
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      registerHealthIndicator: false
+      slidingWindowSize: 10
+      minimumNumberOfCalls: 5
+      permittedNumberOfCallsInHalfOpenState: 3
+      automaticTransitionFromOpenToHalfOpenEnabled: true
+      waitDurationInOpenState: 2s
+      failureRateThreshold: 50
+      eventConsumerBufferSize: 10
+      recordExceptions:
+        - org.springframework.web.client.HttpServerErrorException
+        - java.io.IOException
+#      ignoreExceptions:
+#        - io.github.robwin.exception.BusinessException
