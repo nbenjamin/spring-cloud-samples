@@ -1,13 +1,11 @@
 package com.nbenja.springcloud.resilience4jexample.controller;
 
 
-import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 @RestController
@@ -25,6 +23,7 @@ public class StudentController {
 
     @GetMapping("/test/{delay}")
     public Response resilience4J(@PathVariable("delay") int delay) {
+
         return circuitBreakerFactory.create("breaker").run(
                 () -> this.randomSlow(delay), t -> this.resilience4JFallbackMethod()
         );
