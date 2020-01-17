@@ -13,7 +13,7 @@ ENV VAULT_PACKAGE vault_${VAULT_VERSION}_linux_amd64.zip
 RUN mkdir /vault
 
 # download ca-certificates
-#RUN apk --no-cache add ca-certificates
+RUN apk --no-cache add ca-certificates
 
 # download wget
 RUN apk --no-cache add wget

@@ -46,6 +46,15 @@ Once you done with above steps go back to to `Vault UI`, and you will see someth
 
 All these above steps can be added to scripts and execute along with docker vault startup.
 
+#### Store values in vault
+Before you insert any value in to value, need to enable `kv secret engine`, here is the command
 
+```bash
+vault secrets enable -path=secret/ kv
+```
 
-
+#### Insert values
+```bash
+vault kv put secret/spring-cloud-vault-demo vaultprops.username=demo vaultprops.password=pass
+```
+<img width="847" alt="Screen Shot 2020-01-17 at 4 39 44 PM" src="https://user-images.githubusercontent.com/870715/72648077-128ed300-3948-11ea-8d87-3407a995d877.png">
