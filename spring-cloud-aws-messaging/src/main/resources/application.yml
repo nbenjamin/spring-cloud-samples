@@ -1,0 +1,12 @@
+cloud:
+  aws:
+    region:
+      static: us-east-1
+    credentials:
+      access-key:
+      secret-key:
+    stack:
+      auto: false
+logging:
+  level:
+    org.springframework.cloud.aws: debug
